@@ -16,6 +16,7 @@ import ReviewManagement from './Page/Main/ReviewManagementPage';
 import WriteNotice from './Page/Main/NoticeWritePage';
 import CalculationManagement from './Page/Main/CalculationManagementPage';
 import { ImageProvider } from './Contexts/ImageContext';
+import RegisterInformation from './Page/Main/RegisterInformation';
 
 function App() {
   const [imageFiles, setImageFiles] = useState({
@@ -41,6 +42,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/register" element={<Register imageFiles={imageFiles} />} />
+                <Route path="/register-information" element={<RegisterInformation imageFiles={imageFiles} />} />
+
                 <Route path="/imgupload/:imageType" element={<ImgUpload setImageFiles={handleSetImageFiles} />} />
                 <Route path="/find-admin-account" element={<FindIDPW />} />
                 <Route path="/admin-menu" element={<AdminMenu />} />
